@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to insert a <script> tag
+    document.getElementById('myDiv').innerHTML = '<script>alert("This alert shouldn't appear!");<\/script>';
+  </script>
+</body>
+</html>
